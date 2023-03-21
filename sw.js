@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'bGZieTVtOG0';
+const CACHE_VERSION = 'bGR0djAxNHY';
 const addResourcesToCache = async (resources) => {
   const cache = await caches.open(CACHE_VERSION);
   await cache.addAll(resources);
@@ -67,6 +67,7 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('install', (event) => {
   event.waitUntil(
     addResourcesToCache([
+      "/",
       "0-bundle.js",
       "1-bundle.js",
       "1-bundle.worker.js",
